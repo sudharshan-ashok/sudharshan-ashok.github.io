@@ -2,6 +2,110 @@
 <html lang="zxx" class="no-js">
 
 <head>
+	<style>
+	
+	article > * {
+    min-width: 0;
+}
+
+article > h1 {
+    font-family: Lucida Grande;
+}
+
+article > p {    
+    --x-height-multiplier: 0.375;
+    --baseline-multiplier: 0.17;
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    letter-spacing: .01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    color: rgba(0,0,0,.84);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+article > .aside {
+    font-family: Lucida Grande;
+    margin: 30px 20px;
+    color: #666;
+    font-size: 0.8em;
+}
+
+img {
+    width: 100%;
+}
+
+.line-numbers a {
+    text-decoration: none;
+    color: #000;
+    padding-right: 1em;
+}
+
+code {
+    background: #eee;
+    padding: 2px 5px;
+}
+
+pre {
+    background: #eee;
+    padding: 10px 15px;
+    overflow: auto;
+}
+
+pre > code {
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+figure figcaption {
+    color: #666;
+    font-style: italic;
+    font-size: 0.8em;
+}article {
+    display: grid;
+    /* I'm using 440px instead of 740px as it makes it easier to view it in the Scrimba simulator additive-symbols: */
+    grid-template-columns: 1fr 1fr 10px 440px 10px 1fr 1fr;
+}
+
+article > * {
+    grid-column: 4;
+}
+
+article > figure {
+    grid-column: 1 / -1;
+    margin: 20px 0;
+}
+
+article > .aside {
+    grid-column: 5 / -1;
+}
+
+article > blockquote {
+    grid-column: 3 / span 2;
+    margin: 0px 0;
+    color: #666;
+    border-left: 3px solid black;
+    padding-left: 10px;
+}
+
+/* General styling */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+
+
+
+	</style>
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
@@ -15,7 +119,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Kenedy Personal</title>
+	<title>Portfolio</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
@@ -34,15 +138,6 @@
 
 <body>
 
-	<!-- Start Preloader Area -->
-	<div class="preloader-area">
-		<div class="loader-box">
-			<div class="loader"></div>
-		</div>
-	</div>
-	<!-- End Preloadedzdsdr Area -->
-
-
 	<!-- Start Header Area -->
 	<header id="header">
 		<div class="container main-menu">
@@ -53,41 +148,29 @@
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
 						<li class=""><a class="active" href="index.html">Home</a></li>
-						<li><a href="#aboutme">About</a></li>
-						<li><a href="#work">Portfolio</a></li>
+						<li><a href="index.html#aboutme">About</a></li>
+						<li><a href="index.html#work">Portfolio</a></li>
 						
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
-	<!-- End Header Area -->
 
 
 	<!-- start banner Area -->
-	<section class="home-banner-area">
+	<section class="banner-area relative">
 		<div class="container">
-			<div class="row fullscreen d-flex align-items-center">
-				<div class="banner-content col-lg-6 col-md-12 justify-content-center ">
-					<div class="me wow fadeInDown" data-wow-duration="0s" data-wow-delay="0.2s">Hello</div>
-					<h1 class="wow fadeInUp" data-wow-duration="0s" data-wow-delay="0.2s">Sudharshan Ashok</h1>
-					<div class="designation mb-50 wow fadeInUp" data-wow-duration="0s" data-wow-delay="0.2s">
-						Passionate about
-						<span class="designer">Data Science</span>
-						and engineering
-						<span class="developer">Products</span>
-					</div>
-					<a href="#" class="primary-btn" data-text="Resume">
-						<span>R</span>
-						<span>e</span>
-						<span>s</span>
-						<span>u</span>
-						<span>m </span>
-						<span>e</span>
-					</a>
-				</div>
-				<div class="col-lg-5 col-md-6">
-					<!-- <img class="img-fluid" src="img/about-2.jpg" alt=""> -->
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						SecureChain: Anti-Counterfeiting using Blockchain and Analytics
+					</h1>
+					<!-- <p class="link-nav">
+						<span class="box">
+							<a href="index.html">Home </a>
+							<a href="portfolio.html">Portfolio</a></p>
+					</span> -->
 				</div>
 			</div>
 		</div>
@@ -95,428 +178,61 @@
 	<!-- End banner Area -->
 
 
-	<!-- Start brands Area
-	<section class="brands-area">
-		<div class="container">
-			<div class="brand-wrap">
-				<div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
-					<div class="col single-brand">
-						<a href="#"><img class="mx-auto" src="img/brand/b1.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="#"><img class="mx-auto" src="img/brand/b2.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="#"><img class="mx-auto" src="img/brand/b3.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="#"><img class="mx-auto" src="img/brand/b4.png" alt=""></a>
-					</div>
-					<div class="col single-brand">
-						<a href="#"><img class="mx-auto" src="img/brand/b5.png" alt=""></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- End brands Area -->
-
-
-	<!-- Start About Area -->
-	<section class="about-area section-gap" id="aboutme">
-		<div class="container">
-			<div class="row align-items-center justify-content-between">
-				<div class="col-lg-4 about-left">
-					<img class="img-fluid" src="img/me2.jpg" alt="">
-				</div>
-				<div class="col-lg-5 col-md-12 about-right">
-					<div class="section-title">
-						<h2>about me</h2>
-					</div>
-					<div class="mb-50 wow fadeIn" data-wow-duration=".8s">
-						<p>
-							Technology Consultant with 3+ years of experience in enabling digital transformation for Fortune 500 clients.
-I'm super passionate about engineering products and driving change in modern businesses using the power of data. </p><p>My Software engineering
-experience powers me with the empathy to look at product development from the user's perspective, while my
-Analytics experience provides me the toolkit to mine answers from data. I'm currently pursuing my Masters
-in Analytics at the University of Minnesota, and am graduating in May 2020. 
-
-
-						</p>
-						<p>While I'm not thinking about the above, I'm thinking about music. I'm a professional singer/music producer with over 50,000 subscribers
-							on Youtube. I also care deeply about LGBTQ+ issues. 
-						</p>
-					</div>
-					<a href="https://www.linkedin.com/in/sudharshanashok/" class="primary-btn white" data-text="Linkedin">
-						<span>L</span>
-						<span>i</span>
-						<span>n</span>
-						<span>k</span>
-						<span>e </span>
-						<span>d</span>
-						<span>i</span>
-						<span>n</span>
-						<span></span>
-					</a>
-					<a href="https://www.youtube.com/channel/UCApaBjgPwWvIgcxjs8VgO7A" class="primary-btn" data-text="Youtube">
-						<span>Y</span>
-						<span>o</span>
-						<span>u</span>
-						<span>tu</span>
-						<span>b</span>
-						<span>e</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End About Area -->
-
 
 	<!-- Start Work Area Area -->
 	<section class="work-area section-gap-top section-gap-bottom-90" id="work">
 		<div class="container">
-			<div class="row d-flex justify-content-between align-items-end mb-80">
-				<div class="col-lg-6">
-					<div class="section-title">
-						<h2>Portfolio</h2>
-						<p>Here are some fun projects that I worked on.</p>
-					</div>
-				</div>
-
-				<div class="col-lg-6">
-					<div class="filters">
-						<ul>
-							<li class="active" data-filter=".all">All Categories</li>
-							<li data-filter=".branding">Data Science</li>
-							<li data-filter=".creative">Products</li>
-							<li data-filter=".web-design">Miscellaneous</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="filters-content">
-				
-				<div class="row grid">
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all creative wow fadeInUp" data-wow-duration="2s">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="img/securechain.png" alt="">
-							</div>
-							<div class="middle">
-								<h4>Securechain</h4>
-								<div class="cat">Client Project</div>
-							</div>
-							<!-- <a class="overlay" href="blog-securechain.html"></a> -->
-						</div>
-					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all web-design branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="img/admitpredict.PNG" alt="">
-							</div>
-							<div class="middle">
-								<h4>Admit Prediction</h4>
-								<div class="cat">Client Project</div>
-							</div>
-							<!-- <a class="overlay" href="portfolio-details.html"></a> -->
-						</div>
-					</div>
-
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all web-design wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="img/mba.PNG" alt="">
-							</div>
-							<div class="middle">
-								<h4>Market Basket Analysis</h4>
-								<div class="cat">How to Supercharge your Store</div>
-							</div>
-							<a class="overlay" href="mba-analysis.html"></a>
-						</div>
-					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding web-design wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.4s">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="img/donorschoose.PNG" alt="">
-							</div>
-							<div class="middle">
-								<h4>DonorsChoose</h4>
-								<div class="cat">Kaggle Project</div>
-							</div>
-							<!-- <a class="overlay" href="portfolio-details.html"></a> -->
-						</div>
-					</div>
+			<article>
+				<p> Data Privacy is an area I'm passionate about and hence this is a project dear to me.
+					 I developed this along with my team for the Carlson School's Trends Marketplace 2020. Hope you like the walkthrough</p><br/>
+				<h2>Overview</h2>
+				<p>A Product Ownership Management System (POMS) designed to handle counterfeiting situations that enables product Tracking through entire supply chain lifecycle and customers can verify legitimacy of their purchase items.
+					<br/><br/>
+					Check out the prototype in action! <a href="https://qldb-securechain.herokuapp.com/"> Link</a>
 					
-					<!-- <div class="single-work col-lg-4 col-md-6 col-sm-12 all creative wow fadeInUp" data-wow-duration="2s">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="img/work/w4.jpg" alt="">
-							</div>
-							<div class="middle">
-								<h4>2D Vinyl Design</h4>
-								<div class="cat">Client Project</div>
-							</div>
-							<a class="overlay" href="portfolio-details.html"></a>
-						</div>
-					</div>
-					<div class="single-work col-lg-4 col-md-6 col-sm-12 all branding wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
-						<div class="relative">
-							<div class="thumb">
-								<div class="overlay overlay-bg"></div>
-								<img class="image img-fluid" src="img/work/w5.jpg" alt="">
-							</div>
-							<div class="middle">
-								<h4>2D Vinyl Design</h4>
-								<div class="cat">Client Project</div>
-							</div>
-							<a class="overlay" href="portfolio-details.html"></a>
-						</div>
-					</div> -->
-				</div>
-			</div>
+					</p>
+			<!-- <div>
+				<iframe style="height:700px; width:100%" src="CapOne.html"></iframe>
+			</div> -->
+			<figure><img src="img/securechain/header.PNG"></figure>
+			<h2>Counterfeiting</h2>
+			<p>Counterfeiting drains US$4.2 trillion from the global economy which is projected to put 5.4 million legitimate jobs at risk by 2022. Several fake drugs are produced by counterfeiter that kill more than 250,000 children a year. There is increasing trend of counterfeit incidents in the pharmaceutical industry globally and toot cause lies in network between a company and its suppliers i.e. Supply Chain.</p>
+			<figure><img src="img/securechain/supplychain.jpg"></figure>
+			<h2>Does Blockchain solve the problem?</h2>
+			<p><strong>Blockchain</strong>: Decentralized distributed ledger which is immutable
+
+				Solves Counterfeiting: Prove the possession of products without any authentication and a centralized authority including complete data integrity
+				
+				Too convoluted, not scalable: Blockchain technology has not become accessible for development. Distributed Ledger => Poor Scalability</p>
+			<h2>Amazon QLDB</h2>
+			<p>
+				<br/>
+				<strong>Immutable and Transparent:</strong> The full history of your database can be accessed and you can query and analyze the history to see how your data has changed over time.
+				<br/><br/>
+				<strong>Verifiable:</strong> QLDB uses a cryptographic hash function (SHA-256) to generate a secure output file of data’s change history, which could help you validate the integrity of data changes.
+				<br/><br/>
+				<strong>Scalable:</strong> Amazon QLDB is highly scalable and can execute 2 – 3X as many transactions than ledgers in common blockchain frameworks.
+				<br/><br/>
+				<strong>Serverless:</strong> With QLDB, you don’t have to worry about provisioning capacity or configuring read and write limits.
+				<br/><br/>
+				<strong>Easy to Use:</strong> QLDB supports PartiQL - a SQL-compatible query language, and transactions are ACID compliant.
+				<br/><br/>
+				<strong>Highly Available:</strong> QLDB replicates multiple copies of data within an Availability Zone (AZ) and across 3 AZs in an AWS region, without any additional cost or setup.</p>
+			<figure><img src="img/securechain/qldb.PNG"></figure>
+			<h2>Our Solution</h2>
+			<figure><img src="img/securechain/sgif.gif"></figure>
+			<h2>Tracking everything in your supply chain. </h2>
+			<figure><img src="img/securechain/provenanc.PNG"></figure>
+			<h2>Counterfeiting Scenarios we can handle.. </h2>
+			<figure><img src="img/securechain/scenarios.jpg"></figure>
+			<figure><img src="img/securechain/counterfeit.PNG"></figure>
+
+			
+		</article>
+			</div> -->
 		</div>
 	</section>
 	<!-- End Work Area Area -->
-
-
-	<!-- Start Job History Area Area -->
-	<section class="job-area section-gap-top section-gap-bottom-90">
-		<div class="container">
-			<div class="row d-flex">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Work Experience</h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Consultant</h4>
-								<p>Robert Bosch Center for Data Science, AI</p>
-							</div>
-							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Jan '10 to May '19'">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
-									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
-								</a>
-							</div>
-						</div>
-						<div class="bottom-sec wow fadeIn" data-wow-duration="2s">
-							● Developed a proprietary model for forecasting cybersecurity attacks as part of client’s R&D team, increasing prediction
-accuracy by 27%, and profiled threats using Gaussian Mixture Model clustering
-<br><br>● Collaborated with MIT’s CSAIL team to analyze existing cybersecurity trends/literature in Financial Services domain; presented reports to top management on improvement areas to meet compliance with industry standards (FAIR, NIIST)
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-6">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Technology Consultant</h4>
-								<p>Tailo India</p>
-							</div>
-							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Jul '15 to Present">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
-									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
-								</a>
-							</div>
-						</div>
-						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.2s">
-							Responsible for evaluating e-commerce store options, developing the web/mobile client with a team of developers and designers, and formulating marketing strategy
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-6">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Software Engineer</h4>
-								<p>PSIOG Digital Pvt. Ltd.</p>
-							</div>
-							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="May '16 to May'18">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
-									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
-								</a>
-							</div>
-						</div>
-						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.4s">
-							● Led the design and development of a data processing product for a Fortune-500 client, valued at $450K+ and was recognized as one of the most innovative projects at client’s annual summit
-							<br><br>● Crafted a proof-of-concept recommender system, modeling user behavior, that led to 24% reduction in logging time
-							<br><br>● Co-developed Financial Behavior Assessment product and optimized the data pipeline using SQL, Python for a fin-tech startup that helps financial advisors understand client’s risk profile in investments
-							<br><br>● Designed and deployed Tableau-powered Safety Module for Engineering/Construction firm, with business intelligence
-							dashboards on OSHA compliance and reliability metrics of 10K+ employees
-							<br><br>● Co-designed A/B tests alongside UX team for an iOS-based large-scale inventory management interface and offered recommendations aimed at elevating user engagement
-						</div>
-					</div>
-				</div>
-
-				<!-- <div class="col-lg-6">
-					<div class="single-job">
-						<div class="top-sec d-flex justify-content-between">
-							<div class="top-left">
-								<h4>Intern Designer</h4>
-								<p>Old Bird IT, New Yorkt</p>
-							</div>
-							<div class="top-right">
-								<a href="#" class="primary-btn" data-text="Jul '15 to Present">
-									<span>J</span><span>u</span><span>l</span>
-									<span>'</span><span>1</span><span>5</span>
-									<span>t</span><span>o</span>
-									<span>P</span><span>r</span><span>e</span><span>s</span><span>e</span><span>n</span><span>t</span>
-								</a>
-							</div>
-						</div>
-						<div class="bottom-sec wow fadeIn" data-wow-duration="2s" data-wow-delay="0.6s">
-							All users on MySpace will know that there are millions of people out there. Every day besides. All users on My will know
-							that there are millions of people out of the field there.
-						</div>
-					</div>
-				</div> -->
-			</div>
-		</div>
-	</section>
-	<!-- End Job Historyt Area Area -->
-
-
-	<!-- Start Service Area
-	<section class="service-area section-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Service Offers</h2>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see
-							some for as low as $.17 each.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="single-service wow fadeInUp" data-wow-duration="1s">
-						<span class="lnr lnr-screen"></span>
-						<h4>
-							<span>Web</span> Design
-						</h4>
-						<p>If you’re looking blank casvsettes on the web, you may confuse.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-						<span class="lnr lnr-laptop-phone"></span>
-						<h4><span>Application</span> Development
-						</h4>
-						<p>If you’re looking blank casvsettes on the web, you may confuse.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-						<span class="lnr lnr-database"></span>
-						<h4><span>Web</span> Development
-						</h4>
-						<p>If you’re looking blank casvsettes on the web, you may confuse.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-						<span class="lnr lnr-chart-bars"></span>
-						<h4><span>Web</span> Development
-						</h4>
-						<p>If you’re looking blank casvsettes on the web, you may confuse.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Service Area -->
-
-
-	<!-- Start Testimonials Area -->
-	<!-- <section class="testimonials_area section-gap">
-		<div class="container">
-			<div class="testi_slider owl-carousel">
-				<div class="item">
-					<div class="testi_item">
-						<img src="img/quote.png" alt="">
-						<h4>Fanny Spencer</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel
-								across her face <br> and She is the host to your journey.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="testi_item">
-						<img src="img/quote.png" alt="">
-						<h4>Fanny Spencer</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel
-								across her face <br> and She is the host to your journey.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="testi_item">
-						<img src="img/quote.png" alt="">
-						<h4>Fanny Spencer</h4>
-						<ul class="list">
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-							<li><a href="#"><i class="fa fa-star"></i></a></li>
-						</ul>
-						<div class="wow fadeIn" data-wow-duration="1s">
-							<p>
-								As conscious traveling Paup ers we must always be oncerned about our dear Mother Earth. If you think about it, you travel
-								across her face <br> and She is the host to your journey.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> --> 
-	<!-- End Testimonials Area -->
-
 
 	<!-- Start Contact Area -->
 	<section class="contact-area section-gap">
@@ -525,8 +241,8 @@ accuracy by 27%, and profiled threats using Gaussian Mixture Model clustering
 				<div class="col-lg-12">
 					<div class="contact-title">
 						<h2>Contact Me</h2>
-						<!-- <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see
-							some for as low as $.17 each.</p> -->
+						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see
+							some for as low as $.17 each.</p>
 					</div>
 				</div>
 			</div>
@@ -534,22 +250,22 @@ accuracy by 27%, and profiled threats using Gaussian Mixture Model clustering
 			<div class="row mt-80">
 				<div class="col-lg-4 col-md-4">
 					<div class="contact-box">
-						<h4>+1 612 295 1700</h4>
+						<h4>+44 2365 654 8962</h4>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="contact-box">
-						<h4>ashok031@umn.edu</h4>
+						<h4>information@colorlib.com</h4>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="contact-box">
-						<h4>Linkedin<a href="https://www.linkedin.com/in/sudharshanashok/"></a></h4>
+						<h4>kenedyjackson.me</h4>
 					</div>
 				</div>
 			</div>
 
-			<!-- <div class="row">
+			<div class="row">
 				<div class="col-lg-12 text-center">
 					<a href="#" class="primary-btn mt-50" data-text="Hire Me">
 						<span>H</span>
@@ -561,11 +277,10 @@ accuracy by 27%, and profiled threats using Gaussian Mixture Model clustering
 						<span>e</span>
 					</a>
 				</div>
-			</div> -->
+			</div>
 		</div>
 	</section>
 	<!-- End Contact Area -->
-
 
 	<!-- start footer Area -->
 	<footer class="footer-area">
@@ -577,18 +292,17 @@ accuracy by 27%, and profiled threats using Gaussian Mixture Model clustering
 							<a href="#">
 								<img src="img/logo.png" alt="">
 							</a>
-							<!-- <h4>Follow Me</h4> -->
+							<h4>Follow Me</h4>
 						</div>
-						<!-- <div class="footer-social">
+						<div class="footer-social">
 							<a href="#"><i class="fa fa-facebook"></i></a>
 							<a href="#"><i class="fa fa-twitter"></i></a>
 							<a href="#"><i class="fa fa-dribbble"></i></a>
 							<a href="#"><i class="fa fa-behance"></i></a>
-						</div> -->
+						</div>
 					</div>
 				</div>
 			</div>
-			<br/>
 			<div class="row footer-bottom justify-content-center">
 				<p class="col-lg-8 col-sm-12 footer-text">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -628,12 +342,3 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </body>
 
 </html>
-
-Technology Consultant with 3+ years of experience in enabling digital transformation for Fortune 500 clients.
-I'm super passionate about engineering products and driving change using the power of data. My Software engineering
-experience powers me with the empathy to look at product development from the user's perspective, while my
-Analytics experience provides me the toolkit to mine answers from data. I'm currently pursuing my Masters
-in Analytics at the University of Minnesota, and am graduating in May 2020. 
-
-While I'm not thinking about the above, I'm thinking about music. I'm a professional musician with over 50,000 subscribers
-on Youtube. I also care deeply about LGBTQ+ issues. 
